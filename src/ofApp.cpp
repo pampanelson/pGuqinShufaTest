@@ -18,8 +18,6 @@ void ofApp::setup(){
 	cameraFbo.allocate(640, 480);
 	cameraFbo.black();
 	
-	
-	
 	drawWidth = ofGetWindowWidth();
 	drawHeight = ofGetWindowHeight();
 	//    flowWidth = drawWidth;
