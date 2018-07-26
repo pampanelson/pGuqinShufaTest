@@ -36,7 +36,7 @@ public:
 	ofPixels			fboPixels;
 	ofImage				fboImg;
 	
-	
+	ofImage				imgTest1;
 	ofFbo               flowFbo;
 	ofFbo               obsticleFbo;
 	

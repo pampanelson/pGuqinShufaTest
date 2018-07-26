@@ -5,11 +5,14 @@ void ofApp::setup(){
 	ofSetFrameRate(30);
 	ofSetVerticalSync(true);
 	// white background color
-//	ofSetBackgroundColor(128, 128, 128);
+	//	ofSetBackgroundColor(128, 128, 128);
 	ofSetBackgroundColor(255, 255, 255);
-
+	
 	fbo.allocate(ofGetWindowWidth(),ofGetWindowHeight(),GL_RGBA);
-
+	
+	
+	imgTest1.load("test1.png");
+	
 	
 	
 	// init camera
@@ -41,7 +44,7 @@ void ofApp::setup(){
 	
 	
 	
-
+	
 }
 
 //--------------------------------------------------------------
@@ -54,14 +57,21 @@ void ofApp::update(){
 		ofEnableBlendMode(OF_BLENDMODE_DISABLED);
 		flowFbo.begin();
 		
-		if (doFlipCamera)
-			simpleCam.draw(cameraFbo.getWidth(), 0, -cameraFbo.getWidth(), cameraFbo.getHeight());  // Flip Horizontal
-		else
-			simpleCam.draw(0, 0, cameraFbo.getWidth(), cameraFbo.getHeight());
+//		if (doFlipCamera){
+//			simpleCam.draw(cameraFbo.getWidth(), 0, -cameraFbo.getWidth(), cameraFbo.getHeight());
+//
+//		}  // Flip Horizontal
+//		else{
+//			simpleCam.draw(0, 0, cameraFbo.getWidth(), cameraFbo.getHeight());
+//
+//		}
+		
+		
+		
 		flowFbo.end();
 		ofPopStyle();
 		
-
+		
 	}
 	
 	
@@ -69,7 +79,7 @@ void ofApp::update(){
 	
 	
 	myFlowTools.update(&flowFbo,&obsticleFbo);
-
+	
 }
 
 //--------------------------------------------------------------
@@ -85,7 +95,7 @@ void ofApp::draw(){
 			ofColor color = fboPixels.getColor(i, j);
 			if(color[0] > 0){
 				fboPixels.setColor(i, j,ofColor(0,0,0,color[3]));
-
+				
 			}
 		}
 	}
@@ -100,55 +110,55 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseEntered(int x, int y){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseExited(int x, int y){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+	
 }
